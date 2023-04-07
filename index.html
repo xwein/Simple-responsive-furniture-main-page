@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <title>Room homepage</title>
+
+</head>
+
+<body>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">home</a>
+    <a href="#">shop</a>
+    <a href="#">about</a>
+    <a href="#">contact</a>
+  </div>
+  <section class="top-page">
+    <div class="nav-logo">
+      <i id="openNav" class="fa-solid fa-bars" onclick="openNav() "></i>
+      <div class="logo">
+        <img src="logo.svg" alt="logo">
+      </div>
+    </div>
+    <div class="desktop-nav">
+      <img src="logo.svg" alt="logo">
+      <a href="#">home</a>
+      <a href="#">shop</a>
+      <a href="#">about</a>
+      <a href="#">contact</a>
+    </div>
+    <div class="image-container">
+      <picture class="img">
+        <source srcset="mobile-image-hero-1.jpg" media="(max-width:550px)">
+        <img id="image" src="desktop-image-hero-1.jpg" alt="Parfum">
+      </picture>
+      <div class="angle-icon">
+        <img id="left-arrow" src="icon-angle-left.svg" alt="angle-icon">
+        <img id="right-arrow" src="icon-angle-right.svg" alt="angle-icon">
+      </div>
+    </div>
+    </div>
+    <div class="top-page-content">
+      <div id="active-p" class="active-paragraph">
+        <h1>Discover innovative ways to decorate</h1>
+        <p class="top-p">We provide unmatched quality, comfort, and style for property owners across the country.
+          Our experts combine form and function in bringing your vision to life. Create a room in your
+          own style with our collection and make your property a reflection of you and what you love.</p>
+      </div>
+
+      <div id="paragraph2">
+        <h1>We are available all across the globe</h1>
+        <p class="top-p">With stores all over the world, it's easy for you to find furniture for your home or place of
+          business.
+          Locally, we're in most major cities throughout the country. Find the branch nearest you using our
+          store locator. Any questions? Don't hesitate to contact us today.</p>
+      </div>
+
+      <div id="paragraph3">
+        <h1>Manufactured with the best materials</h1>
+        <p class="top-p">  Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
+          to ensure that every product is made as perfect and as consistent as possible. With three decades of 
+          experience in this industry, we understand what customers want for their home and office.</p>
+      </div>
+
+
+      <div class="action-call">
+        <p>SHOP NOW</p>
+        <img src="icon-arrow.svg" alt="icon-arrow">
+      </div>
+    </div>
+  </section>
+  <section class="bot-page">
+    <img src="image-about-dark.jpg" alt="furniture">
+    <div class="bot-page-content">
+      <h1>ABOUT OUR FURNITURE</h1>
+      <p>Our multifunctional collection blends design and function to suit your individual taste.
+        Make each room unique, or pick a cohesive theme that best express your interests and what
+        inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+        or anything in between. Product specialists are available to help you create your dream space.</p>
+    </div>
+    <img src="image-about-light.jpg" alt="furniture">
+  </section>
+
+</body>
+<script src="myscript.js"></script>
+<script src="https://kit.fontawesome.com/da2d8d690e.js" crossorigin="anonymous"></script>
+
+</html>

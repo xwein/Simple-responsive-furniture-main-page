@@ -1,0 +1,408 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* main styling */
+
+body {
+  /* background-color: white; */
+  font-family: 'League Spartan', sans-serif;
+  font-size: 12px;
+  gap: 10px;
+}
+
+/* navbar */
+/* The side navigation menu */
+.sidenav {
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1000;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  left: 0;
+  background-color: white;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+/* The navigation menu links */
+.sidenav a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bolder;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 20%;
+  left: 25px;
+  font-size: 36px;
+}
+
+/* Top section */
+
+.top-page {
+  /* height: 78vh; */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.nav-logo {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30%;
+  position: absolute;
+  top: 6%;
+  z-index: 1;
+}
+
+.nav-logo img {
+  width: 10vw;
+}
+
+#openNav {
+  font-size: 5vw;
+  color: white;
+  padding-left: 15%;
+}
+
+/* Top image + arrow icons */
+
+.image-container {
+  position: relative;
+  max-width: 100%;
+}
+
+picture .img,
+picture img {
+  width: 100%;
+}
+
+.angle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 45%;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  width: 20%;
+  height: 10%;
+}
+
+.angle-icon img {
+  width: 10%;
+  height: auto;
+}
+
+/* Top part content */
+
+.top-page-content {
+  padding: 30px 15px 0px 15px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 7%;
+}
+
+.top-page-content h1 {
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+.top-p {
+  color: hsl(0, 0%, 63%);
+  line-height: 1.2rem;
+}
+
+.action-call {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10%;
+}
+
+.action-call p {
+  letter-spacing: 15px;
+}
+
+.bot-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px;
+}
+
+.bot-page img {
+  max-width: 100%;
+  width: 100%;
+
+}
+
+.bot-page-content {
+  padding: 30px 15px 0px 15px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 7%;
+}
+
+.bot-page-content h1 {
+  letter-spacing: 0.4rem;
+  font-size: 4vw;
+}
+
+.bot-page-content p {
+  color: hsl(0, 0%, 63%);
+  line-height: 1.2rem;
+}
+
+
+@media only screen and (min-width: 600px) {
+  .top-page {
+    height: 65vh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+
+  .nav-logo {
+    display: none;
+  }
+
+  .nav-logo img {
+    width: 10vw;
+  }
+
+  #openNav {
+    font-size: 5vw;
+    color: white;
+    padding-left: 15%;
+  }
+
+  /* Top image + arrow icons */
+
+  .image-container {
+    position: relative;
+    width: 60%;
+    height: 65vh;
+  }
+
+  picture .img,
+  picture img {
+    width: 100%;
+    height: 65vh;
+
+  }
+
+  .angle-icon {
+    right: -10%;
+    width: 10%;
+    height: 10%;
+  }
+
+  .angle-icon img:hover {
+    width: 20%;
+    background-color: (16, 1, 9, 0.7);
+
+  }
+
+  .angle-icon img {
+    width: 10%;
+    height: auto;
+  }
+
+  /* Top part content */
+
+  .top-page-content {
+    padding: 10%;
+    height: 65vh;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vw;
+  }
+
+  .top-page-content h1 {
+    font-size: 2vw;
+    line-height: 2.7rem;
+  }
+
+  .bot-page {
+    display: flex;
+    flex-direction: row;
+    height: 35vh;
+  }
+
+  .bot-page img {
+    width: 30%;
+    height: 100%;
+  }
+
+  .bot-page-content {
+    height: 100%;
+    width: 40%;
+    padding: 40px 50px 0px 50px;
+    display: flex;
+  }
+
+  .bot-page-content h1 {
+    letter-spacing: 0.4rem;
+    font-size: 2vw;
+  }
+
+  .bot-page-content p {
+    color: hsl(0, 0%, 63%);
+    font-size: 1vw;
+    line-height: 1.4rem;
+  }
+
+  /* Actions with arrows */
+  #paragraph2,
+  #paragraph3 {
+    display: none;
+  }
+
+  .desktop-nav {
+    padding-left: 80px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    z-index: 1;
+  }
+
+  .desktop-nav a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bolder;
+    color: white;
+  }
+
+  .desktop-nav img {
+    height: 1.1rem;
+  }
+
+  .desktop-nav a:hover{
+    border-bottom: 1px solid white;
+  }
+  
+  .action-call{
+    cursor: pointer;
+  }
+
+  .action-call:hover{
+    opacity: 0.5;
+  }
+}
